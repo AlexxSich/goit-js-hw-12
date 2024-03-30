@@ -75,7 +75,8 @@ letter-spacing: 0.04em;
   letter-spacing: 0.04em;
 }
 
-.search-btn:hover {
+.search-btn:hover,
+.load-more-btn:hover {
   background-color:  #6c8cff;
 }
 
@@ -87,6 +88,20 @@ letter-spacing: 0.04em;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #989898;
+}
+
+.load-more-btn {
+  margin: 0 auto;
+  width: 125px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4E75FF;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;  
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 }
 
 .search-images-form {
@@ -161,6 +176,10 @@ object-fit: cover;
   .loader-container { 
     display: none;
   }
+  .is-hidden {
+    display: none;;
+  }
+  
   .active{
     display: flex;
     justify-content: center;

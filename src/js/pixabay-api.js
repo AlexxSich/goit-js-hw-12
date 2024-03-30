@@ -1,5 +1,6 @@
+import axios from "axios";
 
-export function getImages(searchedImg) {    
+export async function getImages(searchedImg, page) {    
 
     const BASE_URL = 'https://pixabay.com/api/';
     const params = new URLSearchParams({
@@ -8,9 +9,12 @@ export function getImages(searchedImg) {
         image_type: "photo",
         orientation: "horizontal",
         safesearch: true,
+        per_page: 15,
+        page,
+
     });
     const url = `${BASE_URL}?${params}`;
  
-return fetch(url).then(res => res.json());
-// тут треба прописати  код для помилки 404 бо fetch не вважає це помилкою
+const res = await axios.get(url, {params});
+return res.data
 }
